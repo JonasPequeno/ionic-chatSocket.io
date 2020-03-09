@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item no-lines>
+      <ion-input placeholder="Digite sua mensagem aqui..." [(ngModel)]="mensagem"></ion-input>
+      <button ion-button item-end clear [disabled]="!mensagem || !mensagem.length">Enviar</button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

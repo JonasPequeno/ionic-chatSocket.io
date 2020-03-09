@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item no-lines>
+    <!-- <ion-label>Digite seu email :</ion-label> -->
+    <ion-input type="text" placeholder="Digite seu usuario" [(ngModel)]="user"></ion-input>
+  </ion-item>
+  <button block ion-button [disabled]="!user || !user.length" (tap)="openChat()">Entrar</button>
+</ion-content>
