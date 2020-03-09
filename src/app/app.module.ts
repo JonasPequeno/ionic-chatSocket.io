@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io'
 const soketConfig: SocketIoConfig = {
-  url: 'http://localhost:3000/'
+  url: 'http://192.168.2.10:3000/'
 }
 
 @NgModule({
