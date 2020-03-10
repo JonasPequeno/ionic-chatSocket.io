@@ -75,4 +75,9 @@ export class ChatPage implements OnInit {
     }).present();
   };
 
+  ionViewWillUnload() {
+    this.socket.removeAllListeners();
+    this.socket.disconnect();
+  }
+
 }
