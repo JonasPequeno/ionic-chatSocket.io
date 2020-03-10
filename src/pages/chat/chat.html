@@ -4,13 +4,24 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-grid>
     <ion-row *ngFor="let message of messages">
-      <ion-col col-9>
-        <p> <strong> {{message.user}}:</strong> {{message.message}} </p>
-        <p> {{ message.date}} </p>
-        <!-- || date:"dd/MM/yyyy hh:mm:ss" -->
+      <ion-col col-9 [attr.offset-3]="message.user != user ? '' : null">
+        <ion-card >
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/user-img.svg">
+            </ion-avatar>
+            <h3> <strong> {{message.user}}</strong> </h3>
+            <h6> {{ message.date | date: 'dd/MM/yyyy H:mm'}} </h6>
+          </ion-item>
+          <ion-card-content>
+            <p>
+              {{message.message}}
+            </p>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -19,9 +30,9 @@
 <ion-footer>
   <ion-toolbar>
     <ion-item no-lines>
-      <ion-input placeholder="Digite sua mensagem aqui..." [(ngModel)]="mensagem"></ion-input>
-      <button ion-button item-end clear ion-only [disabled]="!mensagem || !mensagem.length" (tap)="sendMessage">
-        <ion-icon color="primary" name="send"></ion-icon>
+      <ion-input placeholder="Digite sua mensagem aqui..." [(ngModel)]="message"></ion-input>
+      <button ion-button item-end clear ion-only [disabled]="!message || !message.length" (tap)="sendMessage()">
+        <ion-icon color="primary" name="ios-send"></ion-icon>
       </button>
     </ion-item>
   </ion-toolbar>

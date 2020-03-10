@@ -1,3 +1,28 @@
 page-chat {
+  ion-content {
+    background-image: url("../../assets//imgs/fundo.jpg");
+    background-size: cover;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* background: rgba(197, 165, 240, 0.5) !important; */
+    height: 100% !important;
+  }
+  .card {
+    border-radius: 30px;
+    margin: 8px;
+  }
 
+  .card-md p {
+    margin: 0 57px 2px;
+  }
+
+  ion-avatar img {
+    width: 40px;
+    height: 40px;
+    width: auto;
+    height: auto;
+  }
+  ion-icon {
+    zoom: 2;
+  }
 }
